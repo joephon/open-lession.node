@@ -1,0 +1,26 @@
+{
+  "name": "open-lession.node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joephon/open-lession.node.git"
+  },
+  "author": "Joephon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joephon/open-lession.node/issues"
+  },
+  "homepage": "https://github.com/joephon/open-lession.node#readme",
+  "engines": {
+      "node": "7.x"
+  },
+  "dependencies": {
+      "express": "4.12.3",
+      "leanengine": "1.2.2"
+  }
+}
