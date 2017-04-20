@@ -8,6 +8,10 @@ AV.init({
   masterKey: process.env.LEANCLOUD_APP_MASTER_KEY 
 })
 
-
 app.use(AV.express())
+
+app.get('/', (req, res,) => {
+  res.json({ msg: 'hello kugou'})
+})
+
 app.listen(process.env.LEANCLOUD_APP_PORT)
