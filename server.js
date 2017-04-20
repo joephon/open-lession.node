@@ -10,7 +10,7 @@ AV.init({
 
 app.use(AV.express())
 
-app.get('/', (req, res,) => {
+app.get('/', (req, res) => {
   res.json({ msg: 'hello kugou'})
 })
 
