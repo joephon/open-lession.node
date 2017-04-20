@@ -23,7 +23,7 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "4.12.3",
-    "leanengine": "1.2.2",
+    "leanengine": "2.x",
     "superagent": "^3.5.2"
   }
 }
