@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/joephon/open-lession.node#readme",
   "engines": {
-      "node": "7.x"
+    "node": "7.x"
   },
   "dependencies": {
-      "express": "4.12.3",
-      "leanengine": "1.2.2"
+    "body-parser": "^1.17.1",
+    "express": "4.12.3",
+    "leanengine": "1.2.2",
+    "superagent": "^3.5.2"
   }
 }
