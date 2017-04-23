@@ -2,7 +2,7 @@ const router = require('express').Router()
     , AV = require('leanengine')
     , request = require('superagent')
     , WXCrypt = require('../utils/WXCrypt')
-    , { BCGKK_SNS, WX_EX_APP_ID, WX_EX_APP_SECRET_KEY } = require('../common/constants')
+    , { WX_EX_SNS, WX_EX_APP_ID, WX_EX_APP_SECRET_KEY } = require('../common/constants')
     
 class User extends AV.Object {}
 AV.Object.register(User)
@@ -16,7 +16,7 @@ router
   if (!code || !iv || !encryptedData) return res.send({ msg: 'Missing Query String!' })
   
   request
-  .get(`${BCGKK_SNS}&js_code=${code}`)
+  .get(`${WX_EX_SNS}&js_code=${code}`)
   .end((err, result) => {
     if (err) return res.json(err)
     if (!JSON.parse(result.text).errcode) {
