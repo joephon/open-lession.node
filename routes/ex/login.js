@@ -1,8 +1,8 @@
 const router = require('express').Router()
     , AV = require('leanengine')
     , request = require('superagent')
-    , WXCrypt = require('../utils/WXCrypt')
-    , { WX_SNS, WX_EX_APP_ID, WX_EX_APP_SECRET_KEY } = require('../common/constants')
+    , WXCrypt = require('../../utils/WXCrypt')
+    , { WX_SNS, WX_EX_APP_ID, WX_EX_APP_SECRET_KEY } = require('../../common/constants')
     
 class User extends AV.Object {}
 AV.Object.register(User)
