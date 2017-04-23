@@ -17,6 +17,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use('/', routes.home)
-app.use('/login', routes.login)
+app.use('/ex/login', routes.ex.login)
 
 app.listen(process.env.LEANCLOUD_APP_PORT || 1111)

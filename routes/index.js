@@ -1,2 +1,2 @@
-module.exports.login = require('./login')
+module.exports.ex = require('./ex')
 module.exports.home = require('./home')
