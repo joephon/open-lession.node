@@ -2,7 +2,7 @@ const router = require('express').Router()
     , AV = require('leanengine')
     , request = require('superagent')
     , WXCrypt = require('../utils/WXCrypt')
-    , { BCGKK_SNS, WX_BCGKK_APP_ID, WX_BCGKK_APP_SECRET_KEY } = require('../common/constants')
+    , { BCGKK_SNS, WX_EX_APP_ID, WX_EX_APP_SECRET_KEY } = require('../common/constants')
     
 class User extends AV.Object {}
 AV.Object.register(User)
@@ -21,7 +21,7 @@ router
     if (err) return res.json(err)
     if (!JSON.parse(result.text).errcode) {
       const sessionKey = JSON.parse(result.text).session_key
-          , pc = new WXCrypt(WX_BCGKK_APP_ID, sessionKey)
+          , pc = new WXCrypt(WX_EX_APP_ID, sessionKey)
           , wxInfo = pc.decrypt(encryptedData , iv)
           , query = new AV.Query('_User')
       query.eaualTo('openId', wxInfo.openId)
